@@ -1,13 +1,125 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" translate="no">
+
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="JS course demo"/>
-    <title>JS course</title>
+    <title>Frontend training</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <p>Разметка</p>
+    <header>
+        <img class="header-logo" src="./images/logo-raif.svg" alt="raiifeisen logo" />
+        <div class="header-user-info">
+            <label class="user-name">Олег Дмитриев</label>
+            <img class="user-photo" src="./images/user-photo.png" alt="user photo" />
+            <img class="exit-btn" src="./images/exit.svg" alt="exit button" />
+        </div>
+    </header>
+    <main>
+        <div class="next-event">
+            <label class="next-event-title">Ближайшее мероприятие</label>
+            <label class="next-event-name">Школа по фронтенду</label>
+            <label class="next-event-location">25.05.2020 · Офис в Нагатино</label>
+            <button>Записаться на курс</button>
+
+            <div class="banner"></div>
+            <div class="banner-2"></div>
+        </div>
+        <div class="events-list">
+            <label class="events-title">Все мероприятия</label>
+            <div class="events-type">
+                <div class="type active">IT Academy</div>
+                <div class="type">Маркетинг</div>
+                <div class="type">Retail</div>
+                <div class="type">Остальные</div>
+            </div>
+            <table class="events-table">
+                <tr>
+                    <td>25.05.2020</td>
+                    <td>
+                        <p>Веницианский карнавал танцев и богохульных плясок: смотрим вместе</p>
+                        <p class="event-description">К посещению приглашаются сотрудники 18-</p>
+                    </td>
+                    <td>&#9825;&nbsp;11</td>
+                    <td>Иннокентий Жданов<br>Поликарпий Осипов</td>
+                    <td><button>Зарегистрироваться</button></td>
+                </tr>
+                <tr>
+                    <td>25.05.2020</td>
+                    <td>
+                        <p>Солнцестоим вместе или как провести выходные продуктивно</p>
+                        <p class="event-description">Если вы любите солнце и стоять - то данный курс вам очень подойдет.
+                            Мы вместе будем стоять и смотреть на солнце. Чистый кайф.</p>
+                    </td>
+                    <td>&#9825;&nbsp;110</td>
+                    <td>Николай Острецов</td>
+                    <td><button class="inactive">Регистрация закрыта</button></td>
+                </tr>
+                <tr>
+                    <td>25.05.2020</td>
+                    <td>
+                        <p>Бредовые макеты и как с ним работать: спитч о проблемах друзей-фронтендеров</p>
+                        <p class="event-description">Что делать если в дизайне, который вам отправил дизайнер написаны
+                            бредовые тексты? Посмеяться?! Это что для вас шуточки?!</p>
+                    </td>
+                    <td>&#9825;&nbsp;11</td>
+                    <td>Акакий Шопский</td>
+                    <td><button>Зарегистрироваться</button></td>
+                </tr>
+                <tr>
+                    <td>25.05.2020</td>
+                    <td>
+                        <p>Аукцион: лоснящаяся шкура золотого дракона Монина. Что скрывается в подвале офиса Нагатино?
+                        </p>
+                        <p class="event-description">Если у вас еще осталась зарплата - приходите, мы будем рады ее
+                            забрать</p>
+                    </td>
+                    <td>&#9825;&nbsp;11</td>
+                    <td>Иван Стручков</td>
+                    <td><button class="inactive">Регистрация закрыта</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="page-mask">
+
+            <form method="post" action="/register">
+                <div class="title">
+                    <label>Запись на мероприятие</label>
+                    <button type="button"><img class="close-btn" src="./images/popup-close.svg" alt="popup close button" /></button>
+                </div>
+                <label class="details">Выберите все необходимые параметры мероприятия</label>
+
+                <div class="description-container">
+                    <p>Венецианский карнавал танцев и богохульных плясок: смотрим вместе</p>
+                    <p class="description">К посещению приглашаются сотрудники 18-</p>
+                </div>
+
+                <div class="location-types">
+                    <div class="type active">Онлайн</div>
+                    <div class="type">Оффлайн: офис Нагатино</div>
+                </div>
+
+                <div class="login">
+                    <label for="login">Кто пойдет на мероприятие</label>
+                    <input id="login" type="text" name="login" placeholder="Логин или имя сотрудника" class="input">
+                </div>
+                <div class="comment">
+                    <label for="comment">Комментарий</label>
+                    <textarea id="comment" name="comment" placeholder="Дополнительная информация" class="input"></textarea>
+                </div>
+
+                <div class="control-buttons">
+                    <button class="accent" type="submit">Зарегистрироваться</button>
+                    <button class="ghost" type="button">Отменить</button>
+                </div>
+
+            </form>
+
+        </div>
+    </main>
 </body>
+
 </html>
