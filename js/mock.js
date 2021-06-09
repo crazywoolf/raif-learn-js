@@ -42,3 +42,12 @@ function randomEvent() {
         registrationDisabled: randomBoolean()
     };
 }
+
+function randomEvents(num) {
+    const events = [];
+    for (let i = 0; i < num; i++) {
+        events.push(randomEvent());
+    }
+
+    return events;
+}
