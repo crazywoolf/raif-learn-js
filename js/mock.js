@@ -1,16 +1,10 @@
-function randomBoolean() {
-    return Boolean(Math.round(Math.random()));
-}
+const randomBoolean = () => Boolean(Math.round(Math.random()));
 
-function randomInteger(min, max) {
-    return Math.round(Math.random() * (max - min)) + min;
-}
+const randomInteger = (min, max) => Math.round(Math.random() * (max - min)) + min;
 
-function randomDate() {
-    return new Date(randomInteger(946688400000, 1623286800000));
-}
+const randomDate = () => new Date(randomInteger(946688400000, 1623286800000));
 
-function randomLine() {
+const randomLine = () => {
     const lines = [
         'Веницианский карнавал танцев и богохульных плясок: смотрим вместе',
         'Солнцестоим вместе или как провести выходные продуктивно',
@@ -25,14 +19,14 @@ function randomLine() {
     return lines[randomInteger(0, 7)];
 }
 
-function randomName() {
+const randomName = () => {
     const firstnames = ['Петр', 'Василий', 'Николай', 'Олег', 'Павел'];
     const surnames = ['Иванов', 'Петров', 'Гагарин', 'Сюткин', 'Грозный'];
 
     return `${firstnames[randomInteger(0, 4)]} ${surnames[randomInteger(0, 4)]}`;
 }
 
-function randomEvent() {
+const randomEvent = () => {
     return {
         date: randomDate(),
         title: randomLine(),
@@ -43,7 +37,7 @@ function randomEvent() {
     };
 }
 
-function randomEvents(num) {
+const randomEvents = (num) => {
     const events = [];
     for (let i = 0; i < num; i++) {
         events.push(randomEvent());
