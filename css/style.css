@@ -1,0 +1,269 @@
+:root {
+  --main-text-color: #2B2D33;
+  --grey-text-color: #AAABAD;
+  --main-bg-color: #fff;
+  --main-disable-color: #E5E5E5;
+  --main-oslo-color: #00A5BC;
+  --main-miami-color: #CFF1E9;
+  --london-theme-color: rgba(43, 45, 51, 0.24);
+  --light-disabled-color: #F4F4F4;
+  --accen-color: #FEE600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+p {
+  margin: 0;
+}
+
+section {
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px 32px;
+  margin-bottom: 48px;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.user-icon {
+  margin: 0 24px 0 12px;
+}
+
+.button {
+  border: none;
+  background-color: var(--main-text-color);
+  border-radius: 8px;
+  height: 48px;
+  color: var(--main-bg-color);
+  padding: 11px 24px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.button--transparent {
+  background-color: transparent;
+  padding: 0;
+  height: auto;
+  color: var(--main-text-color);
+}
+
+.button--light {
+  background-color: transparent;
+  border: 2px solid var(--grey-text-color);
+  color: var(--main-text-color);
+  padding: 7px 20px;
+  height: 36px;
+  line-height: 18px;
+}
+
+.button--light:disabled {
+  border-color: var(--main-disable-color);
+  color: var(--main-disable-color);
+}
+
+.button--accent {
+  background-color: var(--accen-color);
+  color: var(--main-text-color);
+  height: 36px;
+  padding: 7px 20px;
+  margin-right: 16px;
+}
+
+.promo {
+  min-height: 300px;
+  background-color: var(--main-miami-color);
+  border-radius: 32px;
+  background-image: url("../img/bg-promo.png");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  padding: 40px 48px;
+}
+
+.promo__additional {
+  margin-bottom: 24px;
+}
+
+.promo__title {
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.promo__subtitle {
+  margin-bottom: 36px;
+}
+
+.events__title {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.chips {
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.chips__item {
+  display: block;
+  height: 32px;
+  border-radius: 16px;
+  padding: 5px 16px;
+  background-color: var(--main-disable-color);
+  margin-right: 8px;
+}
+
+.chips__item--active,
+input:checked + .chips__item {
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+}
+
+.events__chips {
+  margin-bottom: 40px;
+}
+
+.table {
+  margin-bottom: 22px;
+}
+
+.table td {
+  padding: 12px 8px;
+  vertical-align: top;
+}
+
+.text--small {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--grey-text-color);
+}
+
+.text--large {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.table__text--color {
+  color: var(--main-oslo-color);
+}
+
+.table__text--with-icon::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  margin-right: 4px;
+  position: relative;
+  top: 2px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--london-theme-color);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup.show {
+  display: flex;
+}
+
+.popup__container {
+  position: relative;
+  background-color: var(--main-bg-color);
+  border-radius: 16px;
+  padding: 32px;
+  width: 600px;
+}
+
+.popup__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.mr-4 {
+  margin-bottom: 4px;
+}
+
+.mr-8 {
+  margin-bottom: 8px;
+}
+
+.mr-24 {
+  margin-bottom: 24px;
+}
+
+.color-container {
+  background-color: var(--light-disabled-color);
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.fieldset {
+  border: none;
+}
+
+.label {
+  display: block;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--main-disable-color);
+  min-height: 36px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.input::placeholder {
+  color: var(--grey-text-color);
+  font-size: 14px;
+}
+
+textarea.input {
+  min-height: 80px;
+  padding: 13px 12px;
+}
+
+.close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  height: 20px;
+  width: 20px;
+}
