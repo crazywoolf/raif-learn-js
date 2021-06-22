@@ -1,6 +1,7 @@
 import {renderList} from './renderList.js';
+import {api} from "./api.js";
 
-export const getData = (url, params, callback) => fetch(url, params)
+export const getData = (url, params, callback) => api.get(url, params)
 	.then(res => res.json())
 	.then(res => {
 		console.log(res);
