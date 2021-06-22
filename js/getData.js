@@ -10,4 +10,4 @@ export const getData = (url, params, callback) => fetch(url, params)
 	})
 	.catch(err => console.log(err));
 
-getData('/data', {}, renderList);
+getData('http://localhost:3000/data', {}, renderList);
