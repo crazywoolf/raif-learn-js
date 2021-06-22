@@ -1,3 +1,5 @@
+import {renderList} from './renderList.js';
+
 export const getData = (url, params, callback) => fetch(url, params)
 	.then(res => res.json())
 	.then(res => {
@@ -7,3 +9,5 @@ export const getData = (url, params, callback) => fetch(url, params)
 		}
 	})
 	.catch(err => console.log(err));
+
+getData('/data', {}, renderList);
